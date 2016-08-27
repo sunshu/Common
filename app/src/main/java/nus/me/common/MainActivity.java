@@ -22,6 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
+import nus.me.common.img.Img_Activity;
 import nus.me.common.net.NetActivity;
 import nus.me.common.ui.activity.ViewActivity;
 import nus.me.common.view.TopBar.TopBar;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private Button btn_net;
     private Button btn_view;
+    private Button btn_img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +77,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,NetActivity.class));
+            }
+        });
+        btn_img = (Button) findViewById(R.id.btn_img);
+        btn_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Img_Activity.class));
             }
         });
 

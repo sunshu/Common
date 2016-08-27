@@ -20,10 +20,23 @@
         android:text="post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn1_get"
+        android:text="get"
+        android:layout_below="@id/btn_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn1_post"
+        android:layout_below="@id/btn1_get"
+        android:text="post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/tv_result"
         android:textColor="#000"
-        android:layout_below="@id/btn_post"
+        android:layout_below="@id/btn1_post"
         android:hint="查询结果"
         android:textColorHint="#000"
         android:layout_width="match_parent"
