@@ -7,6 +7,34 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="nus.me.common.Bus.BusActivity">
+    android:background="#fff"
+    tools:context="nus.me.common.bus.BusActivity">
+
+    <Button
+        android:id="@+id/btn_send"
+        android:text="发送数据"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_next"
+        android:text="ｎｅｘｔ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/tv_get"
+        android:text="接受"
+        android:layout_below="@id/btn_send"
+        android:textColor="#000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:id="@+id/fl"
+        android:background="#FF0"
+        android:layout_below="@id/tv_get"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
 
 </RelativeLayout>
+

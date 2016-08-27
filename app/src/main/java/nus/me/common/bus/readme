@@ -1,0 +1,33 @@
+总线
+                EventBus    和　Otto
+                采用命名规范     注解
+事件继承            Yes          Yes
+用户继承            Yes          No
+缓存最近事件         Yes         No
+时间生产者           No          Yes
+交互线程的事件传递    Yes        No
+主线程的事件传递      Yes       No
+后台线程的事件传递    Yes        No
+异步的事件传递        Yes      No
+
+
+EventBus 基本用法
+
+分订阅、注册、发布、取消
+    注册
+    EventBus.getDefault().register(this);
+    EventBus.getDefault().register(new MyClass())
+    // 注册：三个参数分别是，消息订阅者(接受者)，接受方法名,事件类
+    EventBus.getDefault().register(this,"setTextA",setTextAEvent.class);
+    取消注册:
+    EventBus.getDefault().unregister(this)
+    EventBus.getDefault().unregister(new MyClass())
+
+    订阅处理数据
+    public void onEventMainThread{}
+    public void onEvent(AnyEventType event){}
+    onEventPostThread 、onEventBackgroundThread、onEventAsync
+
+    发布:
+    EventBus.getDefault().postSticky(new SecondActivityEvent("Message From SecondActivity"));
+    EventBus,getDefault().post(new ChangeImgEvent(1));

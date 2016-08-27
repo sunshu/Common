@@ -27,7 +27,8 @@
         <activity android:name=".img.UIL_Activity" />
         <activity android:name=".img.Picasso_Activity" />
         <activity android:name=".img.Img_Activity" />
-        <activity android:name=".Bus.BusActivity"></activity>
+        <activity android:name=".bus.BusActivity" />
+        <activity android:name=".bus.BusHelpActivity"></activity>
     </application>
 
 </manifest>
