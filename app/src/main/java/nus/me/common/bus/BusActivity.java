@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -27,15 +28,16 @@ public class BusActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bus);
 
 
-        EventBus.getDefault().register(this);
+//        EventBus.getDefault().register(this);
         findViewById(R.id.btn_next).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BusFragment busFragment = new BusFragment();
-                FragmentManager manager = getSupportFragmentManager();
-                FragmentTransaction transaction = manager.beginTransaction();
-                transaction.replace(R.id.fl,busFragment);
-                transaction.commit();
+//                BusFragment busFragment = new BusFragment();
+//                FragmentManager manager = getSupportFragmentManager();
+//                FragmentTransaction transaction = manager.beginTransaction();
+//                transaction.replace(R.id.fl,busFragment);
+//                transaction.commit();
+                startActivity(new Intent(BusActivity.this,BusHelpActivity.class));
 
             }
         });
@@ -48,23 +50,38 @@ public class BusActivity extends AppCompatActivity {
             MyEvent myEvent = new MyEvent();
                 myEvent.setType("0");
                 myEvent.setContent("content");
-            EventBus.getDefault().post(myEvent);
+//            EventBus.getDefault().post(myEvent);
 
-
+                EventBus.getDefault().post(myEvent);
             }
         });
 
     }
 
-
-
-
-    @Subscribe(threadMode = ThreadMode.MAIN) //在ui线程执行
-    public void onUserEvent(MyEvent event) {
-        if (event.getType().equals("0")){
-            tv_get.setText(""+event.getContent());
-        }
+    @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
     }
+    @Override
+    public void onStop() {
+        EventBus.getDefault().unregister(this);
+        super.onStop();
+    }
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(MyEvent event) {
+        Toast.makeText(BusActivity.this, event.getContent(), Toast.LENGTH_SHORT).show();
+    }
+
+
+
+
+//    @Subscribe(threadMode = ThreadMode.MAIN) //在ui线程执行
+//    public void onUserEvent(MyEvent event) {
+//        if (event.getType().equals("0")){
+//            tv_get.setText(""+event.getContent());
+//        }
+//    }
 
 
 //
@@ -90,6 +107,6 @@ public class BusActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        EventBus.getDefault().unregister(this);
+//        EventBus.getDefault().unregister(this);
     }
 }

@@ -10,6 +10,7 @@ import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Annotation;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,6 +23,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
+import nus.me.common.annotation.AnnotationActivity;
 import nus.me.common.bus.BusActivity;
 import nus.me.common.img.Img_Activity;
 import nus.me.common.net.NetActivity;
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_view;
     private Button btn_bus;
     private Button btn_img;
+    private Button btn_annotation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +97,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, BusActivity.class));
+            }
+        });
+
+        btn_annotation = (Button) findViewById(R.id.btn_annotation);
+        btn_annotation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, AnnotationActivity.class));
             }
         });
 

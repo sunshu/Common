@@ -51,6 +51,12 @@
             android:text="总线"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_annotation"
+            android:text="注解"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
         <Button
             android:id="@+id/btn_view"
             android:text="自定义Ｖiew"

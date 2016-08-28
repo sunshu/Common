@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -24,10 +25,23 @@ public class BusHelpActivity extends AppCompatActivity {
         tv_content = (TextView) findViewById(R.id.tv_content);
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN) //在ui线程执行
-    public void onUserEvent(MyEvent event) {
-        if (event.getType().equals("0")){
-            tv_content.setText(""+event.getContent());
-        }
+//    @Subscribe(threadMode = ThreadMode.MAIN) //在ui线程执行
+//    public void onUserEvent(MyEvent event) {
+//        if (event.getType().equals("0")){
+//            tv_content.setText(""+event.getContent());
+//        }
+//    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(MyEvent event) {
+        Toast.makeText(BusHelpActivity.this, event.getContent(), Toast.LENGTH_SHORT).show();
+        tv_content.setText(event.getContent());
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
     }
 }

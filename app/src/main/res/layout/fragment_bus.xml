@@ -8,7 +8,7 @@
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/tv_f"
-        android:textColor="#fff"
+        android:textColor="#000"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />
