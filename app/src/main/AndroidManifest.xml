@@ -31,7 +31,9 @@
         <activity android:name=".bus.BusHelpActivity" />
         <activity android:name=".annotation.AnnotationActivity" />
         <activity android:name=".tween.TweenActivity" />
-        <activity android:name=".property.PropertyActivity"></activity>
+        <activity android:name=".property.PropertyActivity" />
+        <activity android:name=".update.UpdateActivity" />
+        <activity android:name=".net.OkHttpActivity"></activity>
     </application>
 
 </manifest>

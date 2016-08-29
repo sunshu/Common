@@ -63,6 +63,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
+            android:id="@+id/btn_property"
+            android:text="属性动画"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_update"
+            android:text="自动更新"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
             android:id="@+id/btn_view"
             android:text="自定义Ｖiew"
             android:layout_width="match_parent"

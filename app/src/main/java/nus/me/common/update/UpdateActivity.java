@@ -1,18 +1,15 @@
-package nus.me.common.property;
+package nus.me.common.update;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import nus.me.common.R;
 
-public class PropertyActivity extends AppCompatActivity {
+public class UpdateActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_property);
-
-
-
+        setContentView(R.layout.activity_update);
     }
 }

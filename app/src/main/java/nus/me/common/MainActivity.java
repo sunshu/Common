@@ -27,8 +27,10 @@ import nus.me.common.annotation.AnnotationActivity;
 import nus.me.common.bus.BusActivity;
 import nus.me.common.img.Img_Activity;
 import nus.me.common.net.NetActivity;
+import nus.me.common.property.PropertyActivity;
 import nus.me.common.tween.TweenActivity;
 import nus.me.common.ui.activity.ViewActivity;
+import nus.me.common.update.UpdateActivity;
 import nus.me.common.view.TopBar.TopBar;
 
 
@@ -42,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_img;
     private Button btn_annotation;
     private Button btn_tween;
+    private Button btn_property;
+    private Button btn_update;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,6 +129,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,TweenActivity.class));
             }
         });
+        btn_property = (Button) findViewById(R.id.btn_property);
+        btn_property.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,PropertyActivity.class));
+            }
+        });
+        btn_update = (Button) findViewById(R.id.btn_update);
+        btn_update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,UpdateActivity.class));
+            }
+        });
+
     }
 
     private void initTopBar() {

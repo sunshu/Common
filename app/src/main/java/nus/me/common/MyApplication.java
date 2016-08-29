@@ -21,9 +21,13 @@ import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.nostra13.universalimageloader.utils.StorageUtils;
+import com.zhy.http.okhttp.OkHttpUtils;
 
 import java.io.File;
 import java.lang.ref.ReferenceQueue;
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
 
 /**
  * Created by nus on 16-8-23.
@@ -37,9 +41,29 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        initOkhttp();
         initVolley();
         initImageLoader();
 
+
+    }
+
+    private void initOkhttp() {
+        initOkhttpUtils();
+
+
+
+    }
+
+    private void initOkhttpUtils() {
+        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+//                .addInterceptor(new LoggerInterceptor("TAG"))
+                .connectTimeout(10000L, TimeUnit.MILLISECONDS)
+                .readTimeout(10000L, TimeUnit.MILLISECONDS)
+                //其他配置
+                .build();
+
+        OkHttpUtils.initClient(okHttpClient);
 
     }
 

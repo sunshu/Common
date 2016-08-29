@@ -28,5 +28,13 @@ public class NetActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.btn_okhttp).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NetActivity.this,OkHttpActivity.class));
+            }
+        });
+
+
     }
 }
