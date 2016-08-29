@@ -58,6 +58,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
+            android:id="@+id/btn_tween"
+            android:text="Tween动画"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
             android:id="@+id/btn_view"
             android:text="自定义Ｖiew"
             android:layout_width="match_parent"

@@ -29,7 +29,9 @@
         <activity android:name=".img.Img_Activity" />
         <activity android:name=".bus.BusActivity" />
         <activity android:name=".bus.BusHelpActivity" />
-        <activity android:name=".annotation.AnnotationActivity"></activity>
+        <activity android:name=".annotation.AnnotationActivity" />
+        <activity android:name=".tween.TweenActivity" />
+        <activity android:name=".property.PropertyActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context="nus.me.common.tween.SelectDialogFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:background="#ff0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="10dp"
+        >
+        <TextView
+            android:text="拍照"
+            android:background="#fff"
+            android:textColor="#000"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout >
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:background="#ff0"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="10dp"
+        >
+        <TextView
+            android:text="相册"
+            android:textColor="#000"
+            android:background="#fff"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout >
+
+</LinearLayout>

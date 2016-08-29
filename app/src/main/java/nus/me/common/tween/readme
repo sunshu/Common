@@ -1,0 +1,4 @@
+alpha fromalpha 透明动画
+rotate fromDegree pivotX 　　旋转动画
+scale 缩放动画
+translate

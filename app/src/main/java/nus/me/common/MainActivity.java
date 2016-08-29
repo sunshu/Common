@@ -27,6 +27,7 @@ import nus.me.common.annotation.AnnotationActivity;
 import nus.me.common.bus.BusActivity;
 import nus.me.common.img.Img_Activity;
 import nus.me.common.net.NetActivity;
+import nus.me.common.tween.TweenActivity;
 import nus.me.common.ui.activity.ViewActivity;
 import nus.me.common.view.TopBar.TopBar;
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_bus;
     private Button btn_img;
     private Button btn_annotation;
+    private Button btn_tween;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,6 +115,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,ViewActivity.class));
+            }
+        });
+
+        btn_tween = (Button) findViewById(R.id.btn_tween);
+        btn_tween.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,TweenActivity.class));
             }
         });
     }
