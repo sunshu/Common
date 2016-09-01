@@ -25,6 +25,7 @@ import com.android.volley.toolbox.StringRequest;
 
 import nus.me.common.annotation.AnnotationActivity;
 import nus.me.common.bus.BusActivity;
+import nus.me.common.game1.Game1Activity;
 import nus.me.common.img.Img_Activity;
 import nus.me.common.net.NetActivity;
 import nus.me.common.property.PropertyActivity;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_annotation;
     private Button btn_tween;
     private Button btn_property;
+    private Button btn_game1;// 拼图
     private Button btn_update;
 
     @Override
@@ -136,6 +138,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,PropertyActivity.class));
             }
         });
+        btn_game1 = (Button) findViewById(R.id.btn_game1);
+        btn_game1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Game1Activity.class));
+            }
+        });
+
         btn_update = (Button) findViewById(R.id.btn_update);
         btn_update.setOnClickListener(new View.OnClickListener() {
             @Override

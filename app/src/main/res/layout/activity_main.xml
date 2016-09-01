@@ -68,6 +68,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
+            android:id="@+id/btn_game1"
+            android:text="拼图"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
             android:id="@+id/btn_update"
             android:text="自动更新"
             android:layout_width="match_parent"

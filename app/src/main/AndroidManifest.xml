@@ -33,7 +33,8 @@
         <activity android:name=".tween.TweenActivity" />
         <activity android:name=".property.PropertyActivity" />
         <activity android:name=".update.UpdateActivity" />
-        <activity android:name=".net.OkHttpActivity"></activity>
+        <activity android:name=".net.OkHttpActivity" />
+        <activity android:name=".game1.Game1Activity"></activity>
     </application>
 
 </manifest>
