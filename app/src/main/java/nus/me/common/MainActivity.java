@@ -116,13 +116,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_view = (Button) findViewById(R.id.btn_view);
-        btn_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,ViewActivity.class));
-            }
-        });
 
         btn_tween = (Button) findViewById(R.id.btn_tween);
         btn_tween.setOnClickListener(new View.OnClickListener() {
@@ -153,6 +146,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,UpdateActivity.class));
             }
         });
+
+        btn_view = (Button) findViewById(R.id.btn_view);
+        btn_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,ViewActivity.class));
+            }
+        });
+
 
     }
 

@@ -34,7 +34,8 @@
         <activity android:name=".property.PropertyActivity" />
         <activity android:name=".update.UpdateActivity" />
         <activity android:name=".net.OkHttpActivity" />
-        <activity android:name=".game1.Game1Activity"></activity>
+        <activity android:name=".game1.Game1Activity" />
+        <activity android:name=".view.toutiao.ChannelActivity"></activity>
     </application>
 
 </manifest>

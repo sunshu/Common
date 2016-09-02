@@ -1,0 +1,11 @@
+<resources>
+    <declare-styleable name="CustomTitileView">
+        <attr name="exampleString" format="string" />
+        <attr name="exampleDimension" format="dimension" />
+        <attr name="exampleColor" format="color" />
+        <attr name="exampleDrawable" format="color|reference" />
+        <attr name="titleText"></attr>
+        <attr name="titleTextColor"></attr>
+        <attr name="titleTextSize"></attr>
+    </declare-styleable>
+</resources>

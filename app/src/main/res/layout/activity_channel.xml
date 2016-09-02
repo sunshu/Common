@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="#fff"
+    tools:context="nus.me.common.view.toutiao.ChannelActivity">
+    <RelativeLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_MyChannel"
+            android:text="我的频道"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:background="#fff"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/myEdit"
+            android:text="编辑"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/fbl_my"
+            app:flexWrap="wrap"
+            android:layout_below="@id/rl1"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_below="@id/fbl_my"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+
+                android:id="@+id/btn_AllChannel"
+                android:text="所有频道"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:background="#fff"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </RelativeLayout>
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/fbl_all"
+            app:flexWrap="wrap"
+            android:layout_below="@id/rl2"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_allChange"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -10,6 +10,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#FFF"
     tools:context="nus.me.common.ui.activity.ViewActivity">
+    <Button
+        android:id="@+id/btn_toutiao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <nus.me.common.view.widget.CustomView
         android:id="@+id/cv"
         android:layout_width="wrap_content"
