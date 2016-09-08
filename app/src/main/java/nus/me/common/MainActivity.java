@@ -25,6 +25,7 @@ import com.android.volley.toolbox.StringRequest;
 
 import nus.me.common.annotation.AnnotationActivity;
 import nus.me.common.bus.BusActivity;
+import nus.me.common.ftp.Ftp_Activity;
 import nus.me.common.game1.Game1Activity;
 import nus.me.common.img.Img_Activity;
 import nus.me.common.net.NetActivity;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_property;
     private Button btn_game1;// 拼图
     private Button btn_update;
+    private Button btn_ftp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,6 +154,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,ViewActivity.class));
+            }
+        });
+        btn_ftp = (Button) findViewById(R.id.btn_ftp);
+        btn_ftp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Ftp_Activity.class));
             }
         });
 

@@ -82,6 +82,11 @@
             android:text="自定义Ｖiew"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_ftp"
+            android:text="ftp客户端"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
 
 

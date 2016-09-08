@@ -35,7 +35,10 @@
         <activity android:name=".update.UpdateActivity" />
         <activity android:name=".net.OkHttpActivity" />
         <activity android:name=".game1.Game1Activity" />
-        <activity android:name=".view.toutiao.ChannelActivity"></activity>
+        <activity android:name=".view.toutiao.ChannelActivity" />
+        <activity android:name=".view.ListView.ListViewActivity" />
+        <activity android:name=".ftp.Ftp_Activity" />
+        <activity android:name=".view.hongyang.HYActivity"></activity>
     </application>
 
 </manifest>

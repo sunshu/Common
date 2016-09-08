@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="beforText" format="string"></attr>
+    <attr name="afterText" format="string"></attr>
+    <attr name="textColor" format="color|dimension"></attr>
+    <attr name="time" format="integer"></attr>
+
+
+    <declare-styleable name="TimerButton">
+        <attr name="beforText" />
+        <attr name="afterText" />
+        <attr name="textColor" />
+        <attr name="time" />
+    </declare-styleable>
+
+</resources>
