@@ -87,6 +87,11 @@
             android:text="ftp客户端"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_ndk"
+            android:text="NDK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
 
 

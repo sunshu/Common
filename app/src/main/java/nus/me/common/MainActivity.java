@@ -28,6 +28,7 @@ import nus.me.common.bus.BusActivity;
 import nus.me.common.ftp.Ftp_Activity;
 import nus.me.common.game1.Game1Activity;
 import nus.me.common.img.Img_Activity;
+import nus.me.common.ndk.NDKActivity;
 import nus.me.common.net.NetActivity;
 import nus.me.common.property.PropertyActivity;
 import nus.me.common.tween.TweenActivity;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_game1;// 拼图
     private Button btn_update;
     private Button btn_ftp;
+    private Button btn_ndk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -161,6 +163,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,Ftp_Activity.class));
+            }
+        });
+        btn_ndk = (Button) findViewById(R.id.btn_ndk);
+        btn_ndk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,NDKActivity.class));
             }
         });
 

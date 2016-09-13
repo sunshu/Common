@@ -38,7 +38,9 @@
         <activity android:name=".view.toutiao.ChannelActivity" />
         <activity android:name=".view.ListView.ListViewActivity" />
         <activity android:name=".ftp.Ftp_Activity" />
-        <activity android:name=".view.hongyang.HYActivity"></activity>
+        <activity android:name=".view.hongyang.HYActivity" />
+        <activity android:name=".ndk.NDKActivity" />
+        <activity android:name=".bar.BarActivity"></activity>
     </application>
 
 </manifest>
